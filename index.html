@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock papper scissor Game</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/f886bd2aee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <button onclick="
+        compareChoice('rock');
+    " class="rockButton"><img src="images/rock.png" alt="" class="img"></button>
+    <button onclick="
+        compareChoice('papper');
+    " class="papperButton"><img src="images/477912-200.png" alt="" class="img"></button>
+    <button onclick="
+        compareChoice('scissor');
+    " class="scissorButton"><img src="images/orginal.png" alt="" class="img"></button>
+    <button class="clearButton" onclick="
+        score.wins = 0;
+        score.loses = 0;
+        score.ties = 0;
+        
+      document.querySelector('.display1').innerHTML = `game not started`;
+      document.querySelector('.display2').innerHTML = `empty`;
+      document.querySelector('.display3').innerHTML = `wins : ${score.wins} , loses : ${score.loses} , ties : ${score.ties}`;
+    ">Restart</button>
+
+    <button onclick="
+        autoplay();
+    ">auto play</button>
+
+    <p class="display1"></p>
+    <p class="display2"></p>
+    <p class="display3"></p>
+<script src="script.js"></script>
+</body>
+</html>
